@@ -59,8 +59,22 @@
             line-height: 60px;
             text-decoration: none;
             color: #e2e2e2;
+
         }
-        
+    nav .menu a::after{
+        content: "";
+        border-bottom: 2px solid red;
+        display: block;
+        margin-top: -15px;
+/*        width: 0px;*/
+        transform: scaleX(0);
+        transition: all .3s;
+    }
+    nav .menu a:hover::after{
+/*        width:100%;*/
+        transform: scaleX(1);
+    }
+   
         header {
             padding-top: 300px;
             padding-bottom: 300px;
@@ -106,6 +120,7 @@
             background-color: #333;
             color: #eee;
             text-decoration: none;
+            transition:all .3s;
         }
         .btn-inverse {
             display: inline-block;
@@ -114,4 +129,8 @@
             color: #333;
             text-decoration: none;
         }
+    .btn:hover {
+        background-color: cornflowerblue;
+        color: white;
+    }
     }
