@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 200px;    
+            height:200px;
+            perspective: 800px;
+            position: relative;
+            margin-top:80px;
+            margin-left:80px;
+        }            
+        .cube{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            transform-style: preserve-3d;
+            transform: rotateY(30deg)rotateX(65deg);
+            transition:all 1s;
+            
+        }
+        .container:hover .cube{
+            transform: rotateY(1000deg)rotateX(1000deg);
+        }
+        .cube div{
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            
+        }
+
+        
+        .front{ background-color: rgba(152, 222, 199, 0.7);}
+        .back{ background-color: rgba(205, 166, 229, 0.7);}
+        .left{ background-color: rgba(237, 204, 151, 0.7);}
+        .right{ background-color: rgba(131, 161, 229, 0.7);}
+        .top{ background-color: rgba(175, 226, 143, 0.7);}
+        .buttom{ background-color: rgba(227, 227, 128, 0.7);}
+        
+        .front{
+            transform: translateZ(100px);
+        }
+        .back{
+            transform: rotateY(180deg)translateZ(100px);
+        }
+        .left{
+            transform: rotateY(-90deg)translateZ(100px);
+        }
+        .right{
+            transform: rotateY(90deg)translateZ(100px);
+        }
+        .top{
+            transform: rotateX(90deg)translateZ(100px);
+        }
+        .buttom{
+            transform: rotateX(-90deg)translateZ(100px);
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="cube">
+            <div class="front"></div>
+            <div class="back"></div>
+            <div class="left"></div>
+            <div class="right"></div>
+            <div class="top"></div>
+            <div class="buttom"></div>
+        </div>
+    </div>
+</body>
+</html>
